@@ -8,19 +8,24 @@ on:
 
 jobs:
   demo-job:
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-node.js@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
       - name: Run demo command
-        run: echo "CI is running successfully!"
+        shell: python
+        run: print("CI is running successfully!")
 
       - name: Run calculator script
         run: python src/main.py
