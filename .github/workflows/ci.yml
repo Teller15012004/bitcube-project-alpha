@@ -17,10 +17,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 'latest'
+
+      - name: Check Node.js version
+        run: node --version
 
       - name: Run demo command
         run: echo "CI is running successfully!"
 
-      - name: Run calculator script
-        run: python src/main.py
+      - name: Run app
+        run: node src/app.js
