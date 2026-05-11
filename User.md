@@ -128,4 +128,31 @@ Rooms slightly below capacity (e.g., 1–2 seats short) could be shown in a seco
     -Combine equipment and capacity filters into a single collapsible "Advanced Filters" panel
     -Equipment shown on room cards should use icon badges to keep the UI compact
 
+### Story #6: Admin Dashboard Viewing
+    As an Admin, I want to view a real-time dashboard showing all current and upcoming bookings across all rooms. So that I can monitor room utilisation and respond quickly to any issues or conflicts.
+
+### Acceptance Criteria:
+
+    -Given I am logged in as an Admin, When I navigate to the dashboard, Then I see a room-by-room timeline view of all bookings for the current day
+    -Given the dashboard is open, When a new booking is made or cancelled by any user, Then the dashboard updates within 30 seconds without requiring a page refresh
+    -Given I click on a booking on the dashboard, When the booking detail panel opens, Then I see the organiser's name, attendee count, meeting title, and equipment in use
+
+### Story Points:
+    8
+### Priority:
+    High
+
+### Dependencies:
+    _Story #1: Basic Room Booking
+    -Story #10: Usage Reports Generation
+
+### Technical Notes:
+    -Initial load must complete within 3 seconds for up to 50 rooms
+    -Access to this view must be restricted to users with the ADMIN role
+
+### Design Notes:
+-Gantt-style horizontal timeline per room is the recommended layout for the day view
+-Include a date picker to navigate to past or future days
+-Colour-code bookings by status: confirmed (green), pending (yellow), maintenance (grey)
+
 
