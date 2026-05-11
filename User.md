@@ -101,4 +101,31 @@ Rooms slightly below capacity (e.g., 1–2 seats short) could be shown in a seco
     -Clearly display the cancellation deadline on the booking detail view
     -"My Bookings" view should have clear visual distinction between upcoming, past, and cancelled bookings
 
+### Story #5: Room Equipment Requirements
+    As a Employee, I want to filter rooms by available equipment (e.g., projector, whiteboard, video conferencing). So that I can book a room that has the tools my meeting requires
+
+### Acceptance Criteria:
+    -Given I am searching for rooms, When I select one or more equipment filters, Then only rooms with all selected equipment items are shown in the results
+    -Given a room is listed, When I view its details, Then I see a complete list of all available equipment in that room
+    -Given I book a room, When the booking confirmation is shown, Then the confirmed equipment list for that room is included in the summary
+
+### Story Points:
+    3
+
+### Priority:
+    Medium
+
+### Dependencies:
+    -Story #1: Basic Room Booking
+    -Story #3: Room Capacity Filtering
+
+### Technical Notes:
+    -Equipment is stored as a many-to-many relationship between rooms and equipment_types tables
+    -Equipment catalogue (types/names) should be managed by the admin
+
+### Design Notes:
+    -Equipment filters should display as checkboxes with recognisable icons (projector icon, camera icon, etc.)
+    -Combine equipment and capacity filters into a single collapsible "Advanced Filters" panel
+    -Equipment shown on room cards should use icon badges to keep the UI compact
+
 
