@@ -50,4 +50,28 @@
     -Recurrence options should expand inline (progressive disclosure) rather than navigating to a new page
     -Clearly distinguish between "cancel this occurrence" and "cancel all future occurrences" in the UI
 
+### Story #3: Room Capacity Filtering
+    As a Employee, I want to filter available rooms by minimum seating capacity. So that I can quickly find a room that comfortably fits all meeting attendees.
+
+### Acceptance Criteria:
+    -Given I am searching for rooms, When I enter a required number of attendees, Then only rooms with a capacity greater than or equal to that number are shown
+    -Given I apply a capacity filter, When no rooms meet the criteria for the selected time slot, Then I see a clear message indicating no rooms are available and am prompted to adjust my search
+    
+### Story Points:
+    2
+
+### Priority:
+    High
+
+### Dependencies:
+    Story #1: Basic Room Booking
+
+### Technical Notes:
+    -Room capacity data must be maintained in the rooms master table
+    -Capacity field should accept numeric input with validation (positive integers only)
+
+### Design Notes:
+Attendee count input should be prominent in the search form, alongside date and time
+Consider a slider or stepper component for ease of use on mobile
+Rooms slightly below capacity (e.g., 1–2 seats short) could be shown in a secondary "near match" section
 
