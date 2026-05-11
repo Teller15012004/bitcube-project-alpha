@@ -1,4 +1,4 @@
-### Story 1 - Basic Room Booking:
+## Story #1 - Basic Room Booking:
  As a Employee, I want to search for and book an available conference room on a specific day and time. So that I can reserve a space for a meeting without manually coordinating with other teams
 
  ### Acceptance Criteria:
@@ -24,7 +24,7 @@
     -Available rooms should be displayed as cards with key info (name, floor, capacity, equipment)
     -Confirmation screen should show a full summary before final submission
 
-### Story 2 - Story #2: Recurring Meeting Setup
+## Story #2 - Story #2: Recurring Meeting Setup
     As a Employee, I want to schedule a recurring meeting (daily, weekly, or monthly) in a single booking action. So that I do not have to manually re-book the same room each time for standing meetings
     
 ### Acceptance Criteria:
@@ -208,5 +208,32 @@ h
 ### Design Notes:
     -Auto-complete for internal employees; free-text entry for external visitors
     -Receptionist's "My Bookings" view should list all bookings they have created, including assisted ones
+
+## Story #9: Booking Conflict Resolution
+    As an Admin, I want to detect, review, and manually resolve booking conflicts. So that meeting organisers are not left without a room due to scheduling errors
+
+### Acceptance Criteria:
+
+    -Given two bookings exist for the same room and overlapping time slot, When the system detects the conflict, Then both bookings are flagged and appear in the Admin conflict queue
+    -Given I am on the conflict resolution screen, When I review a conflict, Then I can reassign one of the conflicting bookings to another available room with a single action
+    -Given a conflict is resolved by the Admin, When the resolution is saved, Then both original organisers receive a notification explaining the change and the new room assignment
+
+### Story Points:
+    8
+
+### Priority:
+    High
+
+### Dependencies:
+    -Story #1: Basic Room Booking
+    -Story #6: Admin Dashboard Viewing
+
+### Technical Notes:
+    -Conflict records should be stored in a booking_conflicts table with status
+    -Admin must be able to override the system's room assignment without the standard availability constraint if necessary
+
+### Design Notes:
+    -Conflict queue should be surfaced as a badge/alert on the Admin dashboard
+    -A conflict history log should be accessible for audit purposes
 
 
