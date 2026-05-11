@@ -236,4 +236,38 @@ h
     -Conflict queue should be surfaced as a badge/alert on the Admin dashboard
     -A conflict history log should be accessible for audit purposes
 
+## Story #10: Usage Reports Generation
+    As an Admin, I want to generate reports on room usage, peak booking times, and no-show rates. So that I can make data-driven decisions about room allocation.
+
+### Acceptance Criteria:
+    -Given I am on the Reports page, When I select a date range and click "Generate Report," Then I see a summary showing total bookings, utilisation rate per room, and peak usage hours
+    -Given a report is generated, When I click "Export," Then a CSV or PDF file of the report is downloaded to my device
+    Given I view the no-show report, When a booking had no check-in recorded within 15 minutes of the start time, Then that booking is counted as a no-show in the report
+
+### Story Points:
+    8
+
+### Priority:
+    Medium
+
+### Dependencies:
+    -Story #1: Basic Room Booking
+    -Story #6: Admin Dashboard Viewing
+
+### Technical Notes:
+    -No-show detection requires a check-in mechanism (e.g., QR code scan or manual confirmation) — this is a dependency assumption
+    -CSV and PDF export are both required formats
+
+### Design Notes:
+    -Provide pre-set date range shortcuts: "Last 7 days," "Last 30 days," "This quarter," "Custom"
+    -Use simple bar/line charts for visual summary before the detailed data table
+
+
+
+
+
+
+
+
+
 
