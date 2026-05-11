@@ -181,5 +181,32 @@ h
     -Maintenance scheduling interface should be accessible from the room management section
     -When conflicts exist, display affected bookings in a clear list with organiser contact info
     
+### Story #8: Visitor Booking Assistance
+    As a Receptionist, I want to create and manage room bookings on behalf of visitors or employees who request assistance at the front desk. So that guests and staff without system access can still have meetings accommodated.
+
+### Acceptance Criteria:
+    -Given I am logged in as a Receptionist, When I initiate a booking on behalf of a user, Then I can search and book any available room and assign it to the requesting employee's or visitor's name
+    -Given I am creating a visitor booking, When I enter the visitor's name and host employee, Then the booking record reflects both the visitor as the attendee and the host as the contact person
+    -Given a booking has been created on behalf of a visitor, When I view the booking, Then it is clearly labelled as a "Receptionist-Assisted" booking with my name as the creator
+
+### Story Points:
+    5
+
+### Priority:
+    Medium
+
+### Dependencies:
+    -Story #1: Basic Room Booking
+    -Story #3: Room Capacity Filtering
+    -Story #5: Room Equipment Requirements
+
+### Technical Notes:
+    -Booking record schema must include created_by, booked_for_name, and booking_type (SELF/ASSISTED) fields
+    -Receptionist role must have permission to book on behalf of others without impersonating them
+    -Visitor entries do not require a system account; name and contact number are sufficient
+
+### Design Notes:
+    -Auto-complete for internal employees; free-text entry for external visitors
+    -Receptionist's "My Bookings" view should list all bookings they have created, including assisted ones
 
 
