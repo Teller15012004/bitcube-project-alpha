@@ -75,3 +75,30 @@ Attendee count input should be prominent in the search form, alongside date and 
 Consider a slider or stepper component for ease of use on mobile
 Rooms slightly below capacity (e.g., 1–2 seats short) could be shown in a secondary "near match" section
 
+### Story #4: Booking Cancellation
+    As a Employee, I want to cancel a room booking I have made. So that the room becomes available for other colleagues when I no longer need it
+
+### Acceptance Criteria:
+    -Given I have an upcoming booking, When I navigate to "My Bookings" and select a booking, Then I see an option to cancel it
+    -Given I initiate a cancellation, When I confirm the action, Then the booking is removed, the room is freed, and I receive a cancellation confirmation
+    -Given a booking is within a restricted cancellation window (e.g., less than 15 minutes before start time), When I attempt to cancel, Then I am warned and must contact the admin or receptionist to proceed
+
+### Story Points:
+    3
+
+### Priority:
+    High
+
+### Dependencies:
+    Story #1: Basic Room Booking
+
+### Technical Notes:
+    -Cancelled bookings should be soft-deleted (status set to CANCELLED) to preserve audit history
+    -Cancellation should trigger a notification to any attendees listed on the booking
+
+### Design Notes:
+    -Cancellation must require a confirmation step (Confirm/Cancel) to prevent accidental deletions
+    -Clearly display the cancellation deadline on the booking detail view
+    -"My Bookings" view should have clear visual distinction between upcoming, past, and cancelled bookings
+
+
