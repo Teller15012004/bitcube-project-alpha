@@ -155,4 +155,31 @@ Rooms slightly below capacity (e.g., 1–2 seats short) could be shown in a seco
 -Include a date picker to navigate to past or future days
 -Colour-code bookings by status: confirmed (green), pending (yellow), maintenance (grey)
 
+### Story #7: Room Maintenance Scheduling
+    As a Facilities Manager, I want to block out rooms for scheduled maintenance or deep cleaning. So that employees cannot book a room that is unavailable due to facilities work
+h
+### Acceptance Criteria:
+    -Given I am logged in as a Facilities Manager, When I select a room and a date/time range and mark it as "Under Maintenance," Then that room is unavailable for booking during that period
+    -Given a maintenance block is active, When an employee searches for rooms, Then the blocked room does not appear in search results for the affected period
+
+### Story Points:
+    5
+
+### Priority:
+    Medium
+
+### Dependencies:
+    -Story #1: Basic Room Booking
+    -Story #4: Booking Cancellation
+
+### Technical Notes:
+    -Maintenance blocks should be stored as a separate maintenance_schedules table, not as bookings
+    -Conflict detection must query both bookings and maintenance_schedules tables
+    -Role-based access: only FACILITIES_MANAGER and ADMIN roles can create maintenance blocks
+
+### Design Notes:
+    -Maintenance scheduling interface should be accessible from the room management section
+    -When conflicts exist, display affected bookings in a clear list with organiser contact info
+    
+
 
