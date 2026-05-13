@@ -8,7 +8,7 @@
 ## Velocity Target
     18 story points for Sprint 1
 ## Selected User Stories
-      | Story # | Title | Story Points |
+    | Story # | Title | Story Points |
     |---------|-------|---------------|
     | Story #1 | Basic Room Booking | 5 |
     | Story #3 | Room Capacity Filtering | 2 |
