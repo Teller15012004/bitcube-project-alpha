@@ -1,5 +1,5 @@
 ### Key Learning
-    -personal reflection.
+    -The most important lesson from Sprint 1 was that dependencies do not just affect what order work gets done — they affect whether work gets done at all.
 
 ### Assumptions That Failed
     -The assumption that broke down most was an estimation assumption.
