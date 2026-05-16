@@ -1,6 +1,6 @@
 # Sprint 1 Retrospective
-    Date:
-    Participants:
+    Date: May 15, 2026
+    Participants: Scrum Master, Product Owner, Developers, Receptionist (Stakeholder Rep)
 ## Start
     - Create sub-tasks for every Sprint Backlog story before the sprint begins so progress is visible day-to-day
     -Increase the number of developers working on the project
