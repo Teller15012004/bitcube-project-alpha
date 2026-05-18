@@ -101,5 +101,5 @@ The `docs/` directory contains markdown artefacts produced during the sprint sim
 
 This project uses **Pull Requests (PRs)** as the primary mechanism for contributing changes. Direct commits to `main` are not permitted.
 
-### Step-by-Step
+
 
