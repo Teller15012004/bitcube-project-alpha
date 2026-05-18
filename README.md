@@ -79,7 +79,22 @@ The application will be available at `http://localhost:3000` by default.
 ```bash
 npm test
 ```
-
+## Repository Structure
+conference-room-booking/
+├── src/                  # Application source code
+│   ├── components/       # UI components
+│   ├── services/         # Business logic and API calls
+│   └── utils/            # Shared utility functions
+├── docs/                 # Sprint and project documentation
+│   ├── sprint-planning/  # Sprint planning notes and goals
+│   ├── retrospectives/   # Sprint retrospective summaries
+│   └── diagrams/         # System diagrams and wireframes
+├── tests/                # Unit and integration tests
+├── .github/
+│   ├── ISSUE_TEMPLATE/   # Standardised issue templates
+│   └── PULL_REQUEST_TEMPLATE.md
+├── README.md             # This file
+└── package.json          # Project metadata and scripts
 ---
 
 ## Sprint Artefacts
@@ -100,23 +115,6 @@ The `docs/` directory contains markdown artefacts produced during the sprint sim
 ## Contribution Workflow
 
 This project uses **Pull Requests (PRs)** as the primary mechanism for contributing changes. Direct commits to `main` are not permitted.
-
-### Step-by-Step
-
-Create a branch from main
-git checkout -b feature/your-feature-name
-Make your changes with clear, atomic commits
-Push your branch to the remote
-git push origin feature/your-feature-name
-Open a Pull Request on GitHub
-
-Use the PR template provided
-Link any relevant issues or sprint artefacts
-Tag at least one teammate for review
-
-
-Address review feedback
-Merge only after approval
 
 ### Branch Naming Convention
 
@@ -149,5 +147,5 @@ The following sections are placeholders for content to be added as the project m
 
 ---
 
-*This README was last updated as part of Assignment 3.1 – Documentation & Pull Requests as Professional Communication.*
+
 
