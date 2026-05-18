@@ -101,5 +101,53 @@ The `docs/` directory contains markdown artefacts produced during the sprint sim
 
 This project uses **Pull Requests (PRs)** as the primary mechanism for contributing changes. Direct commits to `main` are not permitted.
 
+### Step-by-Step
 
+Create a branch from main
+git checkout -b feature/your-feature-name
+Make your changes with clear, atomic commits
+Push your branch to the remote
+git push origin feature/your-feature-name
+Open a Pull Request on GitHub
+
+Use the PR template provided
+Link any relevant issues or sprint artefacts
+Tag at least one teammate for review
+
+
+Address review feedback
+Merge only after approval
+
+### Branch Naming Convention
+
+| Type | Format | Example |
+|------|--------|---------|
+| Feature | `feature/short-description` | `feature/room-filter-ui` |
+| Bug fix | `fix/short-description` | `fix/double-booking-error` |
+| Documentation | `docs/short-description` | `docs/update-readme` |
+
+### Pull Request Expectations
+
+A well-formed PR should:
+- Explain **why** the change is being made (not just what)
+- Describe what reviewers should focus on
+- Reference relevant sprint documentation or issues where applicable
+- Be small enough to review in a single sitting
+
+---
+
+## Future Technical Sections
+
+The following sections are placeholders for content to be added as the project matures:
+
+- **[ ] Environment Variables** – List of required `.env` keys and their purpose
+- **[ ] Database Setup** – Schema, migrations, and seed data instructions
+- **[ ] API Reference** – Endpoint documentation
+- **[ ] Deployment Guide** – CI/CD pipeline and production deployment steps
+- **[ ] Authentication** – Login flow and role-based access control
+- **[ ] Troubleshooting** – Common errors and their resolutions
+
+---
+
+*This README was last updated as part of Assignment 3.1 – Documentation & Pull Requests as Professional Communication.*
 
