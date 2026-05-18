@@ -60,7 +60,7 @@ Before running this project locally, ensure you have the following installed:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/conference-room-booking.git
+git clone https://github.com/Teller15012004/bitcube-project-alpha.git
 
 # 2. Navigate into the project directory
 cd conference-room-booking
